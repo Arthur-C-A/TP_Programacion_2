@@ -11,20 +11,16 @@ public class PilaStatic implements PilaTDA {
     @Override
     public void inicializarPila() {
         if (pila == null) {
-            System.out.println("Inicializando Pila...");
             pila = new int[maxLong];
-            System.out.println("Pila inicializada✅!");
         }  else {
-            System.out.println("La pila ya estaba inicializada.");
+            System.out.println("La pila ya esta inicializada.");
         }
     }
 
     @Override
     public void apilar(int elemento) {
         if (indexPila < maxLong) {
-            System.out.println("Apilando " + elemento);
             pila[indexPila] = elemento;
-            System.out.println("Se apilo exitosamente "+ elemento);
             indexPila++;
         } else {
             System.out.println("✖️ La pila se lleno ✖️");
@@ -35,9 +31,7 @@ public class PilaStatic implements PilaTDA {
     public void desapilar() {
         if (indexPila > 0) {
             indexPila--;
-            System.out.println("Desapilando " + pila[indexPila]);
             pila[indexPila] = 0;
-            System.out.println("Se desapiló con éxito " + pila[indexPila]);
         } else {
             System.out.println("✖️ No se puede desapilar, la pila está vacía ✖️");
         }
