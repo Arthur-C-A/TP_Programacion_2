@@ -47,41 +47,47 @@ Implementación de conjuntos con límites dinámicos y operaciones fundamentales
 Intersección, unión y diferencia
 Comparación de igualdad entre conjuntos
 Cálculo de la cardinalidad (cantidad de elementos)
+
 6. TDA Diccionario
 Dos enfoques:
 
 Claves con valores únicos: Similar a un diccionario clásico.
 Claves con conjuntos de valores: Donde cada clave puede estar asociada a múltiples valores (útil en muchos contextos reales).
+
 7. TDA Árbol Binario de Búsqueda (ABB)
 Un enfoque iterativo y recursivo para los árboles binarios de búsqueda, con operaciones como:
 
 Búsqueda de elementos
 Calcular la altura y profundidad de nodos
 Mostrar los elementos en distintos recorridos (In-orden, Pre-orden, Post-orden)
+
 8. Árboles AVL y Árboles B
 Árbol AVL: Balanceo automático mediante rotaciones.
 Árbol B: Estructura especializada para grandes cantidades de datos con operaciones de inserción y eliminación bien optimizadas.
+
 9. TDA Grafo
 Los grafos se implementan usando dos representaciones: matriz de adyacencia y listas de adyacencia. Con métodos que resuelven problemas como:
 
 Encontrar predecesores
 Calcular el grado de un vértice
 Detectar vértices aislados
-🚀 Ejecución
+
+## 🚀 Ejecución
+
 Para correr los ejemplos en tu máquina:
 
 Clona el repositorio:
 
-'bash'
+```bash```
 **Copiar código**
-'git clone https://github.com/tuusuario/programacion-II-tdas.git'
+```git clone https://github.com/tuusuario/programacion-II-tdas.git```
 
 Compila y ejecuta los archivos de Java o Python según lo requiera el ejercicio:
 
-'bash'
+```bash```
 **Copiar código**
-'javac TDA_Pila.java'
-'java TDA_Pila'
+```javac TDA_Pila.java```
+```java TDA_Pila'```
 
 ## 🧠 Reflexión Final
 
