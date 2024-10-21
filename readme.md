@@ -1,12 +1,16 @@
 # 💻 Trabajo Práctico - Programación II - UADE : TDAs y Complejidad Algorítmica 🚀
+
 ¡Bienvenido a mi repositorio de Programación II! Este proyecto está dedicado a explorar, implementar y optimizar estructuras de datos abstractas (TDAs) como pilas, colas, árboles binarios y más, tanto en versiones estáticas como dinámicas. Es un viaje profundo en el mundo de las estructuras de datos, con un enfoque en la eficiencia y el análisis de costos temporal y espacial.
 
-🎯 Objetivos del Proyecto
+## 🎯 Objetivos del Proyecto
+
 Definir y comprender los TDAs desde su raíz.
 Implementar soluciones eficientes en Java y Python utilizando listas dinámicas y arreglos.
 Evaluar y comparar el costo computacional entre diferentes implementaciones.
 Desarrollar métodos avanzados para manipular pilas, colas y árboles con un toque de creatividad y rigor.
-📜 Contenidos
+
+## 📜 Contenidos
+
 1. TDA Pila
 Definición y operaciones básicas: Push, Pop, Peek, etc.
 Implementaciones estáticas (basadas en arreglos) y dinámicas (basadas en nodos enlazados).
@@ -17,6 +21,7 @@ Invertir el contenido de una pila: Básicamente le damos la vuelta a la pila con
 Contar los elementos: Recorremos la pila, contando sin destruir.
 Sumar los elementos: Ideal para pilas numéricas, recorremos y sumamos.
 Calcular el promedio: Simplemente sumamos y dividimos por el total de elementos.
+
 2. TDA Cola
 Definición y operaciones básicas: Enqueue, Dequeue, Front.
 Implementaciones estáticas y dinámicas con listas enlazadas.
@@ -26,11 +31,13 @@ Invertir el contenido de una cola: Dos versiones: una con ayuda de pilas y otra 
 Comparar el final de dos colas: ¿Coinciden o no? Esta función lo verifica con precisión.
 Determinar si una cola es capicúa: Comprobamos si los extremos son iguales.
 Comparar si dos colas son inversas: Una cola es el espejo de la otra si sus elementos están en orden inverso.
+
 3. TDA Cola con Prioridades
 Definición y operaciones básicas: Insertar con prioridad, atender con prioridad.
 Métodos adicionales para colas con prioridad:
 Combinar dos colas con prioridad: Fusionamos dos colas, considerando que si dos elementos tienen la misma prioridad, la cola 1 siempre tiene más peso.
 Comparar si dos colas con prioridad son idénticas: Se comparan uno a uno los elementos y sus prioridades.
+
 4. Análisis de Costos
 Este proyecto incluye un análisis exhaustivo de costos temporales y espaciales de las operaciones implementadas. Aquí destacamos las diferencias de eficiencia entre las versiones basadas en arreglos y aquellas que usan listas enlazadas, midiendo su impacto a medida que crece el número de elementos.
 
