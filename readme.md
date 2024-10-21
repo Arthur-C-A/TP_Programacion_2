@@ -72,14 +72,17 @@ Para correr los ejemplos en tu máquina:
 
 Clona el repositorio:
 
-bash
-Copiar código
-git clone https://github.com/tuusuario/programacion-II-tdas.git
+'bash'
+**Copiar código**
+'git clone https://github.com/tuusuario/programacion-II-tdas.git'
+
 Compila y ejecuta los archivos de Java o Python según lo requiera el ejercicio:
 
-bash
-Copiar código
-javac TDA_Pila.java
-java TDA_Pila
-🧠 Reflexión Final
+'bash'
+**Copiar código**
+'javac TDA_Pila.java'
+'java TDA_Pila'
+
+## 🧠 Reflexión Final
+
 Cada uno de estos TDAs está diseñado con un enfoque en la eficiencia, pensando en problemas del mundo real. Desde el manejo de grandes volúmenes de datos hasta la optimización del uso de memoria, este trabajo representa no solo un ejercicio académico, sino una caja de herramientas adaptable a múltiples escenarios en el desarrollo de software.
