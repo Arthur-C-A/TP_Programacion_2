@@ -2,7 +2,7 @@ package org.uade.impl;
 
 import org.uade.api.PilaTDA;
 
-public class PilaStatic implements PilaTDA {
+public class PilaEstatica implements PilaTDA {
 
     private int[] pila;
     private int indexPila = 0;
