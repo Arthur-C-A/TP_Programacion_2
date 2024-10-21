@@ -9,6 +9,7 @@ public class AppPilaDinamica {
 
         //app.pasarPilaInvertida();
         //app.copiarPila();
+        //a
         //app.invertirElementos();
         app.contarElementos();
         app.sumarElementos();
