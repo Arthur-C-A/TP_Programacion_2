@@ -1,3 +1,4 @@
+# 💻 Trabajo Práctico - Programación II - UADE : TDAs y Complejidad Algorítmica 🚀
 ¡Bienvenido a mi repositorio de Programación II! Este proyecto está dedicado a explorar, implementar y optimizar estructuras de datos abstractas (TDAs) como pilas, colas, árboles binarios y más, tanto en versiones estáticas como dinámicas. Es un viaje profundo en el mundo de las estructuras de datos, con un enfoque en la eficiencia y el análisis de costos temporal y espacial.
 
 🎯 Objetivos del Proyecto
