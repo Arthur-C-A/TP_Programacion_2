@@ -1,10 +1,8 @@
-package org.uade.util;
-
-import org.uade.impl.PilaDinamica;
+package org.uade.impl;
 
 public class Nodo {
-    public int dato;
-    public Nodo siguiente;
+    int dato;
+    Nodo siguiente;
 
     public Nodo(int dato) {
         this.dato = dato;

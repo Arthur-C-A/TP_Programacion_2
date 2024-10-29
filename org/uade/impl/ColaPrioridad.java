@@ -4,19 +4,19 @@ import org.uade.api.ColaPrioridadTDA;
 
 public class ColaPrioridad implements ColaPrioridadTDA {
 
-    class Nodo {
+    class NodoEspecial {
         int prioridad;
         int valor;
-        Nodo siguiente;
+        NodoEspecial siguiente;
 
-        public Nodo(int prioridad, int valor) {
+        public NodoEspecial(int prioridad, int valor) {
             this.prioridad = prioridad;
             this.valor = valor;
             this.siguiente = null;
         }
     }
 
-    private Nodo inicio;
+    private NodoEspecial inicio;
 
     @Override
     public void inicializarCola() {
@@ -25,12 +25,12 @@ public class ColaPrioridad implements ColaPrioridadTDA {
 
     @Override
     public void acolarPrioridad(int prioridad, int valor) {
-        Nodo nuevo = new Nodo(prioridad, valor);
+        NodoEspecial nuevo = new NodoEspecial(prioridad, valor);
         if (inicio == null || prioridad > inicio.prioridad) {
             nuevo.siguiente = inicio;
             inicio = nuevo;
         } else {
-            Nodo anterior = null, actual = inicio;
+            NodoEspecial anterior = null, actual = inicio;
             while (actual != null && prioridad <= actual.prioridad) {
                 anterior = actual;
                 actual = actual.siguiente;

@@ -1,12 +1,15 @@
 package org.uade.app;
 
+import org.uade.api.ColaPrioridadTDA;
+import org.uade.api.ColaTDA;
 import org.uade.api.PilaTDA;
+import org.uade.util.ColaOps;
+import org.uade.impl.ColaDinamica;
 import org.uade.impl.PilaEstatica;
 
 public class AppPilaEstatica {
 
     public static void main(String[] args) {
-
 
 
 

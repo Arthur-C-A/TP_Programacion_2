@@ -7,6 +7,10 @@ public class ColaEstatica implements ColaTDA {
     private int[] colaArray;
     private int indiceUltimo;
 
+
+
+    //Al ser estatico, la cantidad eleemntos permitidos es de 100 que fueron hardcodeados en colaArray
+
     @Override
     public void inicializarCola() {
         indiceUltimo = 0;

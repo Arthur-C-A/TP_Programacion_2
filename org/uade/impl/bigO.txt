@@ -1,0 +1,4 @@
+// O(1): Tiempo constante, no depende del tamaño de la entrada (e.g., acceso a un elemento en un arreglo).
+// O(n): Tiempo lineal, crece proporcionalmente al tamaño de la entrada (e.g., recorrer una lista).
+// O(log n): Tiempo logarítmico, crece rápidamente al inicio y luego se estabiliza (e.g., búsqueda binaria).
+// O(n²): Tiempo cuadrático, crece exponencialmente con el tamaño, ineficiente para grandes entradas (e.g., ordenamiento burbuja).

@@ -4,16 +4,6 @@ import org.uade.api.ColaTDA;
 
 public class ColaDinamica implements ColaTDA {
 
-    class Nodo {
-        int valor;
-        Nodo siguiente;
-
-        // Constructor para inicializar el valor del nodo
-        public Nodo(int valor) {
-            this.valor = valor;
-            this.siguiente = null;
-        }
-    }
 
     private Nodo inicio;
     private Nodo fin;
@@ -54,7 +44,7 @@ public class ColaDinamica implements ColaTDA {
             System.out.println("✖️ No hay elementos en la cola ✖️");
             return -1;
         }
-        return inicio.valor;
+        return inicio.dato;
     }
 
     @Override

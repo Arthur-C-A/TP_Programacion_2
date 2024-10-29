@@ -1,5 +1,4 @@
 package org.uade.impl;
-import org.uade.util.Nodo;
 
 import org.uade.api.PilaTDA;
 
@@ -15,7 +14,7 @@ public class PilaDinamica implements PilaTDA {
     public void inicializarPila() {
         topeNodo = null;
     }
-
+    //El costo es 0(1)
     @Override
     public void apilar(int elemento) {
 
@@ -23,7 +22,7 @@ public class PilaDinamica implements PilaTDA {
         nuevoNodo.siguiente = topeNodo; // tuki
         topeNodo = nuevoNodo;//tuki
     }
-
+    //El costo es 0(1)
     @Override
     public void desapilar() {
 
@@ -34,7 +33,7 @@ public class PilaDinamica implements PilaTDA {
         }
 
     }
-
+    //El costo es 0(1)
     @Override
     public int tope() {
 
