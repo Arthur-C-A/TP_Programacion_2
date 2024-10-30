@@ -9,7 +9,7 @@ public class ColaEstatica implements ColaTDA {
 
 
 
-    //Al ser estatico, la cantidad eleemntos permitidos es de 100 que fueron hardcodeados en colaArray
+    // Al ser estatico, la cantidad eleemntos permitidos es de 100 que fueron hardcodeados en colaArray
 
     @Override
     public void inicializarCola() {

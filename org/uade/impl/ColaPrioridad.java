@@ -9,7 +9,7 @@ public class ColaPrioridad implements ColaPrioridadTDA {
         int valor;
         NodoEspecial siguiente;
 
-        public NodoEspecial(int prioridad, int valor) {
+        public NodoEspecial(int valor, int prioridad) {
             this.prioridad = prioridad;
             this.valor = valor;
             this.siguiente = null;
@@ -24,7 +24,7 @@ public class ColaPrioridad implements ColaPrioridadTDA {
     }
 
     @Override
-    public void acolarPrioridad(int prioridad, int valor) {
+    public void acolarPrioridad(int valor, int prioridad) {
         NodoEspecial nuevo = new NodoEspecial(prioridad, valor);
         if (inicio == null || prioridad > inicio.prioridad) {
             nuevo.siguiente = inicio;

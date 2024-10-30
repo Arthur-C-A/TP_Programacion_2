@@ -26,7 +26,7 @@ public class PilaEstatica implements PilaTDA {
             pila[indexPila] = elemento;
             indexPila++;
         } else {
-            System.out.println("✖️ La pila se lleno ✖️");
+            System.out.println("✖️ No se puede apilar mas elementos, la pila se lleno ✖️");
         }
 
     }
