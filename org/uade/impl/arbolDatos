@@ -1,0 +1,27 @@
+PROFUNDIDAD ARBOL
+
+Es la longitud del camino unico de un nodo X a la raiz
+Se cuenta a si mismo.
+
+
+ALTURA NODO
+
+La altura de un nodo es la longitud del camino mas largo desde dicho nodo hasta la hoja.
+No se cuenta a si mismo
+
+Tamaño de un SUB-ARBOL/NODO
+
+Todas las ramas posibles descendientes de estes se contabilizan + 1
+
+PRE-ORDER
+
+Visitamos la raiz, luego nodo derecho e izquierdo hasta concluir
+
+IN-ORDER
+
+Empezamos visitando el ultimo elemento del sub-arbol izquierdo, vamos a la raiz y derecho hasta finalizar
+
+POST-ORDER
+
+EN ORDEN HORIZONTAL DESDE EL ULTIMO NODO IZQUIERDO HASTA LA DERECHA DEL SUB-ARBOL
+ASI HASTA CONCLUIR, POR ULTIMO IR A LA RAIZ
