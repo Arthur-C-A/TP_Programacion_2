@@ -38,7 +38,6 @@ public class PilaDinamica implements PilaTDA {
     public int tope() {
 
         if (topeNodo != null) {
-            System.out.println("✔️ El tope actual es: " + topeNodo.dato);
             return topeNodo.dato;
         } else {
             System.out.println("✖️ La pila está vacía o no fue inicializada, se devuelve -1 ✖️");
@@ -51,7 +50,6 @@ public class PilaDinamica implements PilaTDA {
     public boolean pilaVacia() {
 
         if (topeNodo == null) {
-            System.out.println("✔️ La pila está vacía.");
             return true;
         }
         return false;
