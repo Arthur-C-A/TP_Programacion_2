@@ -52,7 +52,6 @@ public class ColaPrioridad implements ColaPrioridadTDA {
         if (inicio != null) {
             return inicio.valor;
         }
-        System.out.println("✖️ La cola está vacía ✖️");
         return -1;
     }
 
@@ -61,7 +60,6 @@ public class ColaPrioridad implements ColaPrioridadTDA {
         if (inicio != null) {
             return inicio.prioridad;
         }
-        System.out.println("✖️ No hay prioridad en una cola vacía ✖️");
         return -1;
     }
 

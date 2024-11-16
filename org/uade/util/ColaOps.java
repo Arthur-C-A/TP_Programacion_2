@@ -1,4 +1,5 @@
 package org.uade.util;
+import org.uade.api.ColaPrioridadTDA;
 import org.uade.api.ColaTDA;
 import org.uade.api.PilaTDA;
 import org.uade.impl.ColaEstatica;
@@ -102,4 +103,39 @@ public class ColaOps {
         }
         return ultimo;
     }
+
+    // Version para Cola Prioridad
+    public static void llenarCola(ColaPrioridadTDA cola) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese la cantidad de elementos:");
+        int n = scanner.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Ingrese el valor:");
+            int valor = scanner.nextInt();
+            System.out.println("Ingrese la prioridad:");
+            int prioridad = scanner.nextInt();
+            cola.acolarPrioridad(valor, prioridad);
+        }
+    }
+    // Version para cola Prioridad
+    public static void mostrarCola(ColaPrioridadTDA cola) {
+        while (!cola.colaVacia()) {
+            System.out.println("Valor: " + cola.primero() + ", Prioridad: " + cola.prioridad());
+            cola.desacolar();
+        }
+    }
+
+
+    private boolean compararColas(ColaPrioridadTDA cp1, ColaPrioridadTDA cp2) {
+        while (!cp1.colaVacia() && !cp2.colaVacia()) {
+            if (cp1.primero() != cp2.primero() || cp1.prioridad() != cp2.prioridad()) {
+                return false;
+            }
+            cp1.desacolar();
+            cp2.desacolar();
+        }
+        return cp1.colaVacia() && cp2.colaVacia();
+    }
+
 }
