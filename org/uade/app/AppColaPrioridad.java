@@ -4,8 +4,6 @@ import org.uade.api.ColaPrioridadTDA;
 import org.uade.impl.ColaPrioridad;
 import org.uade.util.ColaOps;
 
-import java.util.Scanner;
-
 public class AppColaPrioridad {
 
     public static void main(String[] args) {
@@ -31,10 +29,10 @@ public class AppColaPrioridad {
         resultado.inicializarCola();
 
         System.out.println("Ingrese los elementos de la Cola Prioridad 1:");
-        llenarCola(cp1);
+        ColaOps.llenarCola(cp1);
 
         System.out.println("Ingrese los elementos de la Cola Prioridad 2:");
-        llenarCola(cp2);
+        ColaOps.llenarCola(cp2);
 
         while (!cp1.colaVacia() || !cp2.colaVacia()) {
             if (cp1.colaVacia()) {
@@ -53,7 +51,7 @@ public class AppColaPrioridad {
         }
 
         System.out.println("Cola combinada:");
-        mostrarCola(resultado);
+        ColaOps.mostrarCola(resultado);
     }
 
     // b) Determinar si dos Colas con prioridad son idénticas
@@ -72,7 +70,7 @@ public class AppColaPrioridad {
         System.out.println("Ingrese los elementos de la Cola Prioridad 2:");
         ColaOps.llenarCola(cp2);
 
-        boolean iguales = compararColas(cp1, cp2);
+        boolean iguales = ColaOps.compararColas(cp1, cp2);
         System.out.println("¿Son idénticas las colas?: " + iguales);
     }
 }

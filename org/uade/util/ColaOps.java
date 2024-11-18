@@ -127,7 +127,7 @@ public class ColaOps {
     }
 
 
-    private boolean compararColas(ColaPrioridadTDA cp1, ColaPrioridadTDA cp2) {
+    public static boolean compararColas(ColaPrioridadTDA cp1, ColaPrioridadTDA cp2) {
         while (!cp1.colaVacia() && !cp2.colaVacia()) {
             if (cp1.primero() != cp2.primero() || cp1.prioridad() != cp2.prioridad()) {
                 return false;
