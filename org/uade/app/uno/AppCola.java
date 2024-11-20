@@ -1,11 +1,11 @@
-package org.uade.app;
+package org.uade.app.uno;
 
 import org.uade.api.ColaTDA;
 import org.uade.impl.ColaEstatica;
 import org.uade.api.PilaTDA;
 import org.uade.impl.PilaDinamica;
 
-import org.uade.util.ColaOps;
+import org.uade.utils.ColaOps;
 
 import java.util.Scanner;
 

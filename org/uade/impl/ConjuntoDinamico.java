@@ -4,12 +4,13 @@ import org.uade.api.ConjuntoTDA;
 
 public class ConjuntoDinamico implements ConjuntoTDA {
     private Nodo inicio;
-
+    // O(1)
     @Override
     public void inicializarConjunto() {
         inicio = null;
     }
 
+    // O(1)
     @Override
     public void agregar(int x) {
         if (!pertenece(x)) {
@@ -18,15 +19,15 @@ public class ConjuntoDinamico implements ConjuntoTDA {
             inicio = nuevoNodo;
         }
     }
-
+    // O(1)
     @Override
     public int elegir() {
         if (!conjuntoVacio()) {
             return inicio.dato;
         }
-        return -1; //
+        return -1;
     }
-
+    // O(1)
     @Override
     public void sacar(int x) {
         Nodo actual = inicio;

@@ -14,23 +14,26 @@ public class DiccionarioSimpleEstatico implements DiccionarioSimpleTDA {
         this.cantidad = 0;
     }
 
+    // O(1)
     @Override
     public void inicializarDiccionario() {
         cantidad = 0;
     }
 
+    // O(n)
     @Override
     public void agregar(int clave, int valor) {
         int pos = obtenerPosicion(clave);
-        if (pos == -1) { // Clave no encontrada, agregar nueva entrada
+        if (pos == -1) {
             claves[cantidad] = clave;
             valores[cantidad] = valor;
             cantidad++;
-        } else { // Clave encontrada, actualizar valor
+        } else {
             valores[pos] = valor;
         }
     }
 
+    // O(n)
     @Override
     public void eliminar(int clave) {
         int pos = obtenerPosicion(clave);
@@ -41,12 +44,14 @@ public class DiccionarioSimpleEstatico implements DiccionarioSimpleTDA {
         }
     }
 
+    // O(n)
     @Override
     public int recuperar(int clave) {
         int pos = obtenerPosicion(clave);
-        return (pos != -1) ? valores[pos] : -1; // Devuelve -1 si la clave no se encuentra
+        return (pos != -1) ? valores[pos] : -1;
     }
 
+    // O(n)
     @Override
     public ConjuntoTDA claves() {
         ConjuntoTDA conjuntoClaves = new ConjuntoEstatico();
@@ -57,6 +62,7 @@ public class DiccionarioSimpleEstatico implements DiccionarioSimpleTDA {
         return conjuntoClaves;
     }
 
+    // O(n)
     private int obtenerPosicion(int clave) {
         for (int i = 0; i < cantidad; i++) {
             if (claves[i] == clave) {

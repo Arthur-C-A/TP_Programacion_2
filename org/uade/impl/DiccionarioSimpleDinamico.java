@@ -6,11 +6,13 @@ import org.uade.api.DiccionarioSimpleTDA;
 public class DiccionarioSimpleDinamico implements DiccionarioSimpleTDA {
     private Nodo inicio;
 
+    // O(1)
     @Override
     public void inicializarDiccionario() {
         inicio = null;
     }
 
+    // O(n)
     @Override
     public void agregar(int clave, int valor) {
         Nodo actual = inicio;
@@ -27,6 +29,7 @@ public class DiccionarioSimpleDinamico implements DiccionarioSimpleTDA {
         }
     }
 
+    // O(n)
     @Override
     public void eliminar(int clave) {
         if (inicio != null) {
@@ -44,15 +47,17 @@ public class DiccionarioSimpleDinamico implements DiccionarioSimpleTDA {
         }
     }
 
+    // O(n)
     @Override
     public int recuperar(int clave) {
         Nodo actual = inicio;
         while (actual != null && actual.dato != clave) {
             actual = actual.siguiente;
         }
-        return actual != null ? actual.dato : -1; // Devuelve -1 si la clave no se encuentra
+        return actual != null ? actual.dato : -1;
     }
 
+    // O(n)
     @Override
     public ConjuntoTDA claves() {
         ConjuntoTDA conjuntoClaves = new ConjuntoEstatico();

@@ -45,7 +45,7 @@ public class PilaDinamica implements PilaTDA {
         }
 
     }
-
+    // O(1)
     @Override
     public boolean pilaVacia() {
 

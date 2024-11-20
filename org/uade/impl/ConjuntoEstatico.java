@@ -3,19 +3,19 @@ package org.uade.impl;
 import org.uade.api.ConjuntoTDA;
 
 public class ConjuntoEstatico implements ConjuntoTDA {
-    // variables
+    // Variables
     private final int MAX_SIZE = 100;
     private int[] elementos;
     private int cantidad;
 
-    //Inician los metodos
-
+    // O(1)
     @Override
     public void inicializarConjunto() {
         elementos = new int[MAX_SIZE];
         cantidad = 0;
     }
 
+    // O(n)
     @Override
     public void agregar(int x) {
         if (!pertenece(x) && cantidad < MAX_SIZE) {
@@ -24,14 +24,16 @@ public class ConjuntoEstatico implements ConjuntoTDA {
         }
     }
 
+    // O(1)
     @Override
     public int elegir() {
         if (!conjuntoVacio()) {
             return elementos[cantidad - 1];
         }
-        return -1; // Indicador de conjunto vacío
+        return -1; //
     }
 
+    // O(n)
     @Override
     public void sacar(int x) {
         for (int i = 0; i < cantidad; i++) {
@@ -43,6 +45,7 @@ public class ConjuntoEstatico implements ConjuntoTDA {
         }
     }
 
+    // O(n)
     @Override
     public boolean pertenece(int x) {
         for (int i = 0; i < cantidad; i++) {
@@ -53,6 +56,7 @@ public class ConjuntoEstatico implements ConjuntoTDA {
         return false;
     }
 
+    // O(1)
     @Override
     public boolean conjuntoVacio() {
         return cantidad == 0;

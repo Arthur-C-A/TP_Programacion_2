@@ -1,8 +1,8 @@
-package org.uade.app;
+package org.uade.app.uno;
 
 import org.uade.api.ColaPrioridadTDA;
-import org.uade.impl.ColaPrioridad;
-import org.uade.util.ColaOps;
+import org.uade.impl.ColaPrioridadDinamica;
+import org.uade.utils.ColaOps;
 
 public class AppColaPrioridad {
 
@@ -20,9 +20,9 @@ public class AppColaPrioridad {
     private void combinarColas() {
         System.out.println("Ejercicio a) Combinar dos colas con prioridades:");
 
-        ColaPrioridadTDA cp1 = new ColaPrioridad();
-        ColaPrioridadTDA cp2 = new ColaPrioridad();
-        ColaPrioridadTDA resultado = new ColaPrioridad();
+        ColaPrioridadTDA cp1 = new ColaPrioridadDinamica();
+        ColaPrioridadTDA cp2 = new ColaPrioridadDinamica();
+        ColaPrioridadTDA resultado = new ColaPrioridadDinamica();
 
         cp1.inicializarCola();
         cp2.inicializarCola();
@@ -58,8 +58,8 @@ public class AppColaPrioridad {
     private void esIgual() {
         System.out.println("\nEjercicio b) Determinar si dos colas con prioridad son idénticas:");
 
-        ColaPrioridadTDA cp1 = new ColaPrioridad();
-        ColaPrioridadTDA cp2 = new ColaPrioridad();
+        ColaPrioridadTDA cp1 = new ColaPrioridadDinamica();
+        ColaPrioridadTDA cp2 = new ColaPrioridadDinamica();
 
         cp1.inicializarCola();
         cp2.inicializarCola();

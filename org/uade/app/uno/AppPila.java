@@ -1,7 +1,7 @@
-package org.uade.app;
+package org.uade.app.uno;
 
 import org.uade.api.PilaTDA;
-import org.uade.util.PilaOps;
+import org.uade.utils.PilaOps;
 import org.uade.impl.PilaEstatica;
 
 public class AppPila {

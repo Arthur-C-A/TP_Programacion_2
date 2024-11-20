@@ -1,4 +1,4 @@
-package org.uade.util;
+package org.uade.utils;
 import org.uade.api.ColaPrioridadTDA;
 import org.uade.api.ColaTDA;
 import org.uade.api.PilaTDA;
@@ -137,5 +137,6 @@ public class ColaOps {
         }
         return cp1.colaVacia() && cp2.colaVacia();
     }
+
 
 }

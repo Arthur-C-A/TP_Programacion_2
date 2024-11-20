@@ -7,7 +7,7 @@ public class PilaEstatica implements PilaTDA {
     private int[] pila;
     private int indexPila = 0;
     private final int maxLong= 5;
-
+    // O(1)
     @Override
     public void inicializarPila() {
 
@@ -18,7 +18,7 @@ public class PilaEstatica implements PilaTDA {
         }
 
     }
-
+    // O(1)
     @Override
     public void apilar(int elemento) {
 
@@ -30,7 +30,7 @@ public class PilaEstatica implements PilaTDA {
         }
 
     }
-
+    // O(1)
     @Override
     public void desapilar() {
 
@@ -43,7 +43,7 @@ public class PilaEstatica implements PilaTDA {
 
     }
 
-
+    // O(1)
     @Override
     public int tope() {
 
@@ -56,7 +56,7 @@ public class PilaEstatica implements PilaTDA {
         return tope;
 
     }
-
+    // O(1)
     @Override
     public boolean pilaVacia() {
 
