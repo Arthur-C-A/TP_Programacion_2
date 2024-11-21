@@ -1,8 +1,6 @@
 package org.uade.utils;
 
 import org.uade.api.PilaTDA;
-import org.uade.impl.PilaDinamica;
-import org.uade.impl.PilaEstatica;
 
 import java.util.Scanner;
 

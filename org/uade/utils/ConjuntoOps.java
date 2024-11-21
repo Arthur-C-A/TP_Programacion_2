@@ -1,7 +1,7 @@
 package org.uade.utils;
 
 import org.uade.api.ConjuntoTDA;
-import org.uade.impl.ConjuntoDinamico;
+import org.uade.impl.ConjuntoMaxNoAcotado;
 
 import java.util.Scanner;
 
@@ -20,8 +20,8 @@ public class ConjuntoOps {
     }
 
 
-    public void mostrarConj(ConjuntoTDA conjunto) {
-        ConjuntoTDA temp = new ConjuntoDinamico(); // O estatico
+    public static void mostrarConj(ConjuntoTDA conjunto) {
+        ConjuntoTDA temp = new ConjuntoMaxNoAcotado(); // O estatico
         temp.inicializarConjunto();
 
         while (!conjunto.conjuntoVacio()) {
@@ -38,5 +38,24 @@ public class ConjuntoOps {
             temp.sacar(elemento);
         }
     }
+
+    public static void llenarConjunto(ConjuntoTDA destino, ConjuntoTDA origen) {
+        ConjuntoTDA temp = new ConjuntoMaxNoAcotado();
+        temp.inicializarConjunto();
+
+        while (!origen.conjuntoVacio()) {
+            int elemento = origen.elegir();
+            origen.sacar(elemento);
+            destino.agregar(elemento);
+            temp.agregar(elemento);
+        }
+
+        while (!temp.conjuntoVacio()) {
+            int elemento = temp.elegir();
+            temp.sacar(elemento);
+            origen.agregar(elemento);
+        }
+    }
+
 
 }

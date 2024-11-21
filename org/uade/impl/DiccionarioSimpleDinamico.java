@@ -4,69 +4,77 @@ import org.uade.api.ConjuntoTDA;
 import org.uade.api.DiccionarioSimpleTDA;
 
 public class DiccionarioSimpleDinamico implements DiccionarioSimpleTDA {
-    private Nodo inicio;
+    private NodoDiccionario inicio;
 
-    // O(1)
     @Override
     public void inicializarDiccionario() {
         inicio = null;
     }
 
-    // O(n)
     @Override
     public void agregar(int clave, int valor) {
-        Nodo actual = inicio;
-        while (actual != null && actual.dato != clave) {
+        NodoDiccionario actual = inicio;
+        while (actual != null) {
+            if (actual.clave == clave) {
+                actual.valor = valor;
+                return;
+            }
             actual = actual.siguiente;
         }
-        if (actual == null) {
-            Nodo nuevoNodo = new Nodo(clave);
-            nuevoNodo.dato = valor;
-            nuevoNodo.siguiente = inicio;
-            inicio = nuevoNodo;
-        } else {
-            actual.dato = valor;
-        }
+        NodoDiccionario nuevo = new NodoDiccionario(clave, valor);
+        nuevo.siguiente = inicio;
+        inicio = nuevo;
     }
 
-    // O(n)
     @Override
     public void eliminar(int clave) {
-        if (inicio != null) {
-            if (inicio.dato == clave) {
-                inicio = inicio.siguiente;
+        NodoDiccionario actual = inicio, anterior = null;
+        while (actual != null && actual.clave != clave) {
+            anterior = actual;
+            actual = actual.siguiente;
+        }
+        if (actual != null) {
+            if (anterior == null) {
+                inicio = actual.siguiente;
             } else {
-                Nodo actual = inicio;
-                while (actual.siguiente != null && actual.siguiente.dato != clave) {
-                    actual = actual.siguiente;
-                }
-                if (actual.siguiente != null) {
-                    actual.siguiente = actual.siguiente.siguiente;
-                }
+                anterior.siguiente = actual.siguiente;
             }
         }
     }
 
-    // O(n)
     @Override
     public int recuperar(int clave) {
-        Nodo actual = inicio;
-        while (actual != null && actual.dato != clave) {
+        NodoDiccionario actual = inicio;
+        while (actual != null) {
+            if (actual.clave == clave) {
+                return actual.valor;
+            }
             actual = actual.siguiente;
         }
-        return actual != null ? actual.dato : -1;
+        throw new RuntimeException("Clave no encontrada");
     }
 
-    // O(n)
     @Override
     public ConjuntoTDA claves() {
-        ConjuntoTDA conjuntoClaves = new ConjuntoEstatico();
-        conjuntoClaves.inicializarConjunto();
-        Nodo actual = inicio;
+        ConjuntoTDA conjunto = new ConjuntoMaxNoAcotado();
+        conjunto.inicializarConjunto();
+        NodoDiccionario actual = inicio;
         while (actual != null) {
-            conjuntoClaves.agregar(actual.dato);
+            conjunto.agregar(actual.clave);
             actual = actual.siguiente;
         }
-        return conjuntoClaves;
+        return conjunto;
+    }
+}
+
+class NodoDiccionario {
+    int clave;
+    int valor;
+    NodoDiccionario siguiente;
+
+    public NodoDiccionario(int clave, int valor) {
+        this.clave = clave;
+        this.valor = valor;
+        this.siguiente = null;
     }
 }

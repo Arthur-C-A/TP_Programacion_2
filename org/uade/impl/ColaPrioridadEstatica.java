@@ -4,24 +4,16 @@ import org.uade.api.ColaPrioridadTDA;
 
 public class ColaPrioridadEstatica implements ColaPrioridadTDA {
 
-    private static class NodoEspecial {
-        int valor;
-        int prioridad;
-
-        public NodoEspecial(int valor, int prioridad) {
-            this.valor = valor;
-            this.prioridad = prioridad;
-        }
-    }
-
-    private NodoEspecial[] cola;
-    private int cantidad; // num de elementos en la cola
-    private final int TAMANIO = 100; // Tamaño maximo de la cola
+    private int[] valores;
+    private int[] prioridades;
+    private int cantidad; // Número de elementos en la cola
+    private final int TAMANIO = 100; // Tamaño máximo de la cola
 
     // O(1)
     @Override
     public void inicializarCola() {
-        cola = new NodoEspecial[TAMANIO];
+        valores = new int[TAMANIO];
+        prioridades = new int[TAMANIO];
         cantidad = 0;
     }
 
@@ -31,12 +23,16 @@ public class ColaPrioridadEstatica implements ColaPrioridadTDA {
         if (cantidad == TAMANIO) {
             throw new RuntimeException("La cola está llena");
         }
+
         int i = cantidad - 1;
-        while (i >= 0 && cola[i].prioridad >= prioridad) {
-            cola[i + 1] = cola[i];
+        while (i >= 0 && prioridades[i] >= prioridad) {
+            valores[i + 1] = valores[i];
+            prioridades[i + 1] = prioridades[i];
             i--;
         }
-        cola[i + 1] = new NodoEspecial(valor, prioridad);
+
+        valores[i + 1] = valor;
+        prioridades[i + 1] = prioridad;
         cantidad++;
     }
 
@@ -52,18 +48,18 @@ public class ColaPrioridadEstatica implements ColaPrioridadTDA {
     @Override
     public int primero() {
         if (cantidad > 0) {
-            return cola[0].valor;
+            return valores[0];
         }
-        return -1;
+        return -1; // Indicador de cola vacía
     }
 
     // O(1)
     @Override
     public int prioridad() {
         if (cantidad > 0) {
-            return cola[0].prioridad;
+            return prioridades[0];
         }
-        return -1;
+        return -1; // Indicador de cola vacía
     }
 
     // O(1)

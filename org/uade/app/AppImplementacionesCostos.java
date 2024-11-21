@@ -24,11 +24,11 @@ public class AppImplementacionesCostos {
         pilaE.inicializarPila();
 
         compararOperacion("Apilar en Pila Estática", () -> {
-            PilaOps.llenarPila(pilaE);  // Acolar en Pila Estática
+            PilaOps.llenarPila(pilaE);
         });
 
         compararOperacion("Apilar en Pila Dinámica", () -> {
-            PilaOps.llenarPila(pilaD);  // Acolar en Pila Dinámica
+            PilaOps.llenarPila(pilaD);
         });
 
         // Comparación de Cola
@@ -47,8 +47,8 @@ public class AppImplementacionesCostos {
         });
 
         // Comparación de Conjunto
-        ConjuntoTDA conjuntoD = new ConjuntoDinamico();
-        ConjuntoTDA conjuntoE = new ConjuntoEstatico();
+        ConjuntoTDA conjuntoD = new ConjuntoMaxNoAcotado();
+        ConjuntoTDA conjuntoE = new ConjuntoMaxAcotado();
 
         conjuntoD.inicializarConjunto();
         conjuntoE.inicializarConjunto();

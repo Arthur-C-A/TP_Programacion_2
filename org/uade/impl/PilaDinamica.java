@@ -2,10 +2,6 @@ package org.uade.impl;
 
 import org.uade.api.PilaTDA;
 
-// Clase Nodo,   lo que hace la magia
-
-
-
 public class PilaDinamica implements PilaTDA {
 
     private Nodo topeNodo; // Referencia al nodo en la cima de la pila

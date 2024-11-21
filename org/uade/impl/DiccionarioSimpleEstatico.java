@@ -54,7 +54,7 @@ public class DiccionarioSimpleEstatico implements DiccionarioSimpleTDA {
     // O(n)
     @Override
     public ConjuntoTDA claves() {
-        ConjuntoTDA conjuntoClaves = new ConjuntoEstatico();
+        ConjuntoTDA conjuntoClaves = new ConjuntoMaxAcotado();
         conjuntoClaves.inicializarConjunto();
         for (int i = 0; i < cantidad; i++) {
             conjuntoClaves.agregar(claves[i]);

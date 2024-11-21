@@ -2,7 +2,7 @@ package org.uade.impl;
 
 import org.uade.api.ConjuntoTDA;
 
-public class ConjuntoDinamico implements ConjuntoTDA {
+public class ConjuntoMaxNoAcotado implements ConjuntoTDA {
     private Nodo inicio;
     // O(1)
     @Override

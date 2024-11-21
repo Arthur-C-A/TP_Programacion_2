@@ -2,7 +2,7 @@ package org.uade.impl;
 
 import org.uade.api.ConjuntoTDA;
 
-public class ConjuntoEstatico implements ConjuntoTDA {
+public class ConjuntoMaxAcotado implements ConjuntoTDA {
     // Variables
     private final int MAX_SIZE = 100;
     private int[] elementos;
