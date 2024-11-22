@@ -51,7 +51,7 @@ public class AppCola {
             colaOrigen.desacolar();
         }
         System.out.println("Elementos de Cola Destino:");
-        ColaOps.mostrar(colaDestino);
+        ColaOps.mostrarCola(colaDestino);
     }
 
     // b) Invertir el contenido de una Cola (usando Pilas auxiliares)
@@ -75,7 +75,7 @@ public class AppCola {
         while (!pilaAux.pilaVacia()) {
             int valor = pilaAux.tope();
             colaOrigen.acolar(valor);
-            ColaOps.mostrar(colaOrigen);
+            ColaOps.mostrarCola(colaOrigen);
             pilaAux.desapilar();
         }
     }
@@ -98,7 +98,7 @@ public class AppCola {
         }
 
         System.out.println("Cola invertida:");
-        ColaOps.mostrar(auxiliar);
+        ColaOps.mostrarCola(auxiliar);
     }
 
     // d) Determinar si el final de la Cola C1 coincide con la Cola C2

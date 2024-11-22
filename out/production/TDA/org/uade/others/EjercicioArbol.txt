@@ -1,0 +1,21 @@
+A)
+
+El árbol no cumple con la propiedad de AVL, ya que varios nodos tienen un factor de balance mayor que 1.
+
+Para balancearlo:
+
+- Nodo 55 necesita una rotación hacia la izquierda en su subárbol derecho, donde se encuentra el nodo 52.
+- Posteriormente, realizar una rotación hacia la derecha en el subárbol donde 55 es raíz.
+
+B)
+
+El árbol no cumple con la propiedad de AVL, ya que varios nodos tienen un factor de balance mayor que 1.
+
+Para balancearlo:
+
+- El nodo 25 tiene un factor de balance de +2, por lo que se necesita una rotación simple a la derecha en el
+  subárbol de 25.
+- El nodo 45 tiene un factor de balance de -2, por lo que se necesita una rotación simple a la izquierda
+  el el subárbol de 45.
+
+Después de estas rotaciones, el árbol se balancea y cumple con la propiedad AVL.

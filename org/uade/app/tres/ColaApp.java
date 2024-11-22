@@ -28,7 +28,7 @@ public class ColaApp {
         ColaOps.llenarCola(cola, scanner, "C");
 
         System.out.println("Cola original:");
-        ColaOps.mostrar(cola);
+        ColaOps.mostrarCola(cola);
 
         ConjuntoTDA conjunto = new ConjuntoMaxNoAcotado();
         conjunto.inicializarConjunto();
@@ -52,7 +52,7 @@ public class ColaApp {
         }
 
         System.out.println("Cola sin elementos repetidos:");
-        ColaOps.mostrar(cola);
+        ColaOps.mostrarCola(cola);
     }
 
     public static void repartirCola(Scanner scanner) {
@@ -62,7 +62,7 @@ public class ColaApp {
         ColaOps.llenarCola(cola, scanner, "C");
 
         System.out.println("Cola original:");
-        ColaOps.mostrar(cola);
+        ColaOps.mostrarCola(cola);
 
         ColaTDA mitad1 = new ColaDinamica();
         ColaTDA mitad2 = new ColaDinamica();
@@ -93,9 +93,9 @@ public class ColaApp {
         }
 
         System.out.println("Primera mitad:");
-        ColaOps.mostrar(mitad1);
+        ColaOps.mostrarCola(mitad1);
         System.out.println("Segunda mitad:");
-        ColaOps.mostrar(mitad2);
+        ColaOps.mostrarCola(mitad2);
     }
 
     public static void elementosRepetidos(Scanner scanner) {
@@ -105,7 +105,7 @@ public class ColaApp {
         ColaOps.llenarCola(cola, scanner, "C");
 
         System.out.println("Cola original:");
-        ColaOps.mostrar(cola);
+        ColaOps.mostrarCola(cola);
 
         ConjuntoTDA vistos = new ConjuntoMaxNoAcotado();
         ConjuntoTDA repetidos = new ConjuntoMaxNoAcotado();
